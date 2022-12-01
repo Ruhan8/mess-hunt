@@ -1,163 +1,55 @@
-body {
-  background-color: #9f9da7;
-  font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #2b3e51;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+body{
+    background: #F8F8F8;
 }
 
-h2 {
-  font-weight: 300;
-  text-align: center;
+*, *::before, *::after{
+    box-sizing: border-box;
 }
 
-p {
-  position: relative;
+.custom-field{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 5px;
 }
 
-a,
-a:link,
-a:visited,
-a:active {
-  color: #3ca9e2;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-a:focus, a:hover,
-a:link:focus,
-a:link:hover,
-a:visited:focus,
-a:visited:hover,
-a:active:focus,
-a:active:hover {
-  color: #329dd5;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.custom-field input{
+    padding: 12px;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    outline-color: deepskyblue;
 }
 
-#login-form-wrap {
-  background-color: #fff;
-  width: 35%;
-  margin: 30px auto;
-  text-align: center;
-  padding: 20px 0 0 0;
-  border-radius: 4px;
-  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+.custom-field .placeholder{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
 }
 
-#login-form {
-  padding: 0 60px;
-  margin: 45px 0px;
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder{
+    top: 21px;
+    font-size: 10px;
+    color: #222;
+    padding: 5px;
+    background: white;
 }
 
-input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  outline: none;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 4px;
+.message{
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    color: steelblue;
 }
 
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 0 0 0 10px;
-  margin: 0;
-  color: #8a8b8e;
-  border: 1px solid #c2c0ca;
-  font-style: normal;
-  font-size: 16px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: relative;
-  display: inline-block;
-  background: none;
-}
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #3ca9e2;
-}
-input[type="email"]:focus:invalid,
-input[type="password"]:focus:invalid {
-  color: #cc1e2b;
-  border-color: #cc1e2b;
-}
-input[type="email"]:valid ~ .validation,
-input[type="password"]:valid ~ .validation {
-  display: block;
-  border-color: #0C0;
-}
-input[type="email"]:valid ~ .validation span,
-input[type="password"]:valid ~ .validation span {
-  background: #0C0;
-  position: absolute;
-  border-radius: 6px;
-}
-input[type="email"]:valid ~ .validation span:first-child,
-input[type="password"]:valid ~ .validation span:first-child {
-  top: 30px;
-  left: 14px;
-  width: 20px;
-  height: 3px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-input[type="email"]:valid ~ .validation span:last-child,
-input[type="password"]:valid ~ .validation span:last-child {
-  top: 35px;
-  left: 8px;
-  width: 11px;
-  height: 3px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.validation {
-  display: none;
-  position: absolute;
-  content: " ";
-  height: 60px;
-  width: 30px;
-  right: 15px;
-  top: 0px;
-}
-
-input[type="submit"] {
-  border: none;
-  display: block;
-  background-color: #3ca9e2;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-}
-input[type="submit"]:hover {
-  background-color: #329dd5;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-#create-account-wrap {
-  background-color: #eeedf1;
-  color: #8a8b8e;
-  font-size: 14px;
-  width: 100%;
-  padding: 10px 0;
-  border-radius: 0 0 4px 4px;
-}
-#login-btn{
-  text-decoration: none;
-  padding: 10px 25px;
-  background: #329dd5;
-  color: white;
-  border-radius: 5px;
+.success{
+    font-size: 18px;
+    margin-top: 15px;
+    color: seagreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
