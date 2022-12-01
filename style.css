@@ -19,6 +19,94 @@
     font-family: sans-serif;
 }
 
+/* Video bg css */
+
+.bg-video-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
+  }
+  video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+  }
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    background-size: 3px 3px;
+    z-index: 2;
+  }
+  /* h1 {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+  }
+  */
+  .buttons{
+    position: absolute;
+    top: 70%;
+    bottom: 0;
+    left: 12%;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+  }
+/* text animation */
+.wrapper {
+    position: absolute;
+    top: 7%;
+    bottom: 0px;
+    left: 0%;
+    right: 0;
+  
+    height: 100vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+    color: white;
+  }
+  
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
 .navbar-brand:hover{
     color: #925665;
 }
@@ -51,8 +139,19 @@
    border: 1px solid #925665;
     border-radius: 10px;
     margin: 5px;
+    cursor: pointer;
 }
 
+nav{
+    position: absolute;
+    z-index: 15;
+}
+span{
+    color:#D23369;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+}
 .home-fluid p{
     font-size: 20px ;
     font-weight: bold;
