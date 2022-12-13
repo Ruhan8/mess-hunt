@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 .home-fluid{
     width: 100%;
     height: 100vh;
@@ -168,12 +168,34 @@ span{
 
 #g-pic{
     width: 100%;
-    height: 500px;
+    height: 320px;
 }
 #b-pic {
     width: 100%;
-    height: 500px;
+    height: 320px;
 }
+.texts{
+  text-shadow: 2px 2px 5px #114357 ;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Noto Serif', serif;
+
+}
+.card a{
+  text-shadow: 2px 2px 3px #135058 ;
+  font-weight: bold;
+  font-style: italic;
+  color: #7b4397;
+  font-family: 'Noto Serif', serif;
+}
+.card p{
+  text-shadow: 2px 2px 1px  #e5cef8;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  color: #00223E;
+  font-size: 20px;
+}
+
 
 #services{
     background: #DC2424;  /* fallback for old browsers */
