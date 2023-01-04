@@ -23,6 +23,7 @@ function submitForm(e) {
   var name = getElementVal("name");
   var emailid = getElementVal("emailid");
   var phone = getElementVal("phone");
+  var password = getElementVal("password");
   var address = getElementVal("address");
   var msgContent = getElementVal("msgContent");
   
@@ -41,13 +42,14 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, emailid,phone,address, msgContent) => {
+const saveMessages = (name, emailid,phone,password,address, msgContent) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
     name: name,
     emailid: emailid,
     phone:phone,
+    password:password,
     address:address,
     msgContent: msgContent,
   });

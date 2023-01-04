@@ -6,30 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signUp to Mess_hunt</title>
+    
     <link rel="stylesheet" href="./contact-style.css">
 </head>
 
 <body>
     <div class="container">
+      <h2 id="c-head"> Please Create Your Account</h2>
         <form action="" id="contactForm">
             <div class="alert">Your message sent</div>
 
             <div class="inputBox">
-                <input type="text" id="name" placeholder="Your name...." />
+                <input type="text" id="name" placeholder="Enter Your name...." />
             </div>
 
             <div class="inputBox">
-                <input type="number" id="phone" placeholder="Your Phone number....." />
+                <input type="number" id="phone" placeholder="Enter Your Phone number....." />
             </div>
+            
+            <div class="inputBox">
+              <input type="number" id="password" placeholder="Enter Your Password" />
+          </div>
 
             <div class="inputBox">
-              <input type="email" id="emailid" placeholder="Your Email....." />
+              <input type="email" id="emailid" placeholder="Enter Your Email....." />
           </div>
             <div class="inputBox">
-              <input type="text" id="address" placeholder="Your Address....." />
+              <input type="text" id="address" placeholder="Enter Your Address....." />
           </div>
             <div class="inputBox">
-                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Write your advice & quection"></textarea>
             </div>
 
             <div class="inputBox">
@@ -42,7 +48,7 @@
             </div>
         </form>
     </div>
-
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="./contact.js"></script>
 </body>

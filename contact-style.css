@@ -11,6 +11,10 @@ body{
   justify-content: center;
   align-items: center;
 }
+#c-head{
+  color:rgb(252, 114, 22);
+  padding: 5px;
+}
 
 .container{
   width: 90%;
@@ -35,7 +39,8 @@ body{
 
 .inputBox{
   width: 100%;
-  margin: 5px 0;
+  margin: 1px 0;
+  padding: 2px 0px;
   border-radius: 5px;
   overflow: hidden;
 }
