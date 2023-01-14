@@ -1,12 +1,14 @@
 const firebaseConfig = {
   apiKey: "AIzaSyCprkYBEwIzO8Yopa-Grla3HMbmBnEXqGQ",
   authDomain: "sign-up-8fcea.firebaseapp.com",
+  databaseURL: "https://sign-up-8fcea-default-rtdb.firebaseio.com",
   projectId: "sign-up-8fcea",
   storageBucket: "sign-up-8fcea.appspot.com",
   messagingSenderId: "735640668625",
   appId: "1:735640668625:web:ce9a716cb631f1151ef8f0",
   measurementId: "G-2HVWB37YYB"
 };
+
 
 
 // initialize firebase
