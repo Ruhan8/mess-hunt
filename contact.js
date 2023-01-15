@@ -9,8 +9,6 @@ const firebaseConfig = {
   measurementId: "G-2HVWB37YYB"
 };
 
-
-
 // initialize firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -24,13 +22,9 @@ function submitForm(e) {
 
   var name = getElementVal("name");
   var emailid = getElementVal("emailid");
-  var phone = getElementVal("phone");
-  var password = getElementVal("password");
-  var address = getElementVal("address");
   var msgContent = getElementVal("msgContent");
-  
 
-  saveMessages(name, emailid,phone, address, msgContent);
+  saveMessages(name, emailid, msgContent);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -44,15 +38,12 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, emailid,phone,password,address, msgContent) => {
+const saveMessages = (name, emailid, msgContent) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
     name: name,
     emailid: emailid,
-    phone:phone,
-    password:password,
-    address:address,
     msgContent: msgContent,
   });
 };
