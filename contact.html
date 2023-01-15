@@ -21,13 +21,26 @@
             <div class="inputBox">
                 <input type="email" id="emailid" placeholder="Your Email....." />
             </div>
-
+            <div class="inputBox">
+              <input type="number" id="password" placeholder="Your password...." />
+          </div>
+            <div class="inputBox">
+              <input type="number" id="phone" placeholder="Your phone...." />
+          </div>
+          <div class="inputBox">
+            <input type="text" id="address" placeholder="Your address...." />
+        </div>
             <div class="inputBox">
                 <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
             </div>
 
-            <div class="inputBox">
-                <button type="submit">Submit</button>
+             <div class="inputBox">
+              <input id="submit" type="submit" onClick="myFunction()"/>
+              <script>
+                function myFunction() {
+                  window.location.href="./home.html";
+                }
+              </script>
             </div>
         </form>
     </div>

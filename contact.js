@@ -22,9 +22,12 @@ function submitForm(e) {
 
   var name = getElementVal("name");
   var emailid = getElementVal("emailid");
+  var phone = getElementVal("phone");
+  var password = getElementVal("password");
+  var address = getElementVal("address");
   var msgContent = getElementVal("msgContent");
 
-  saveMessages(name, emailid, msgContent);
+  saveMessages(name, emailid,phone,password,address, msgContent);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -38,13 +41,17 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, emailid, msgContent) => {
+const saveMessages = (name, emailid,phone,password,address,msgContent) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
     name: name,
     emailid: emailid,
+    phone:phone,
+    password:password,
+    address:address,
     msgContent: msgContent,
+
   });
 };
 
