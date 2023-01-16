@@ -27,9 +27,12 @@ function submitForm(e) {
   var address = getElementVal("address");
   var msgContent = getElementVal("msgContent");
 
-  saveMessages(name, emailid,phone,password,address, msgContent);
+  if(name && emailid && phone && password && address && msgContent){
+    saveMessages(name, emailid,phone,password,address, msgContent);
+    window.location.href="./home.html";
 
-  //   enable alert
+
+      //   enable alert
   document.querySelector(".alert").style.display = "block";
 
   //   remove the alert
@@ -39,21 +42,34 @@ function submitForm(e) {
 
   //   reset the form
   document.getElementById("contactForm").reset();
+
+  }
+
+
+
 }
 
-const saveMessages = (name, emailid,phone,password,address,msgContent) => {
-  var newContactForm = contactFormDB.push();
 
-  newContactForm.set({
-    name: name,
-    emailid: emailid,
-    phone:phone,
-    password:password,
-    address:address,
-    msgContent: msgContent,
+  const saveMessages = (name, emailid,phone,password,address,msgContent) => {
+    var newContactForm = contactFormDB.push();
+  
+   
+  
+        newContactForm.set({
+      name: name,
+      emailid: emailid,
+      phone:phone,
+      password:password,
+      address:address,
+      msgContent: msgContent,
+  
+    });
+  
+    
+  
+  
+  };
 
-  });
-};
 
 const getElementVal = (id) => {
   return document.getElementById(id).value;
